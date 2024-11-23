@@ -1,0 +1,141 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Контейнер для центрирования */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Заголовок */
+header {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    border-bottom: 5px solid #444;
+}
+
+/* Заголовок магазина */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Навигационные кнопки */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav button {
+    color: white;
+    background-color: #555;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #444;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Стили для списка товаров */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Центрируем товары по горизонтали */
+    width: 100%;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Чтобы товары не сжимались */
+}
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на небольших экранах */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr; /* 1 колонка на самых маленьких экранах */
+    }
+}

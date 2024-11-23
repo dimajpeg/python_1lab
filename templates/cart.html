@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Магазин спортивных товаров</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="text-center">Магазин спортивных товаров</h1>
+            <div class="menu">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Главная</a>
+                <a href="{{ url_for('products_page') }}" class="btn btn-primary">Товары</a>
+                <a href="{{ url_for('cart') }}" class="btn btn-primary">Корзина</a>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">О нас</a>
+                <a href="{{ url_for('contacts') }}" class="btn btn-primary">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Ваша корзина</h2>
+        {% if cart_items %}
+            <div class="cart-items">
+                {% for item in cart_items %}
+                    <div class="cart-item">
+                        <img src="{{ url_for('static', filename=item['product']['image']) }}" alt="{{ item['product']['name'] }}">
+                        <h3>{{ item['product']['name'] }}</h3>
+                        <p>Количество: {{ item['quantity'] }}</p>
+                        <p>Цена: ${{ item['product']['price'] * item['quantity'] }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="cart-summary">
+                <p><strong>Общая стоимость: ${{ total_price }}</strong></p>
+            </div>
+
+            <h3>Оформить заказ</h3>
+            <form action="{{ url_for('cart') }}" method="POST">
+                <div class="form-group">
+                    <label for="first_name">Имя:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Фамилия:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn btn-success">Оформить заказ</button>
+            </form>
+        {% else %}
+            <p>Ваша корзина пуста. Вы можете добавить товары на странице <a href="{{ url_for('products_page') }}">Товары</a>.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин спортивных товаров</p>
+    </footer>
+</body>
+</html>
+

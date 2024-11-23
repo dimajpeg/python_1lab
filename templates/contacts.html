@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Магазин спортивных товаров</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="text-center">Магазин спортивных товаров</h1>
+            <div class="menu">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Главная</a>
+                  <a href="{{ url_for('products_page') }}" class="btn btn-primary">Товары</a>
+
+                <a href="{{ url_for('cart') }}" class="btn btn-primary">Корзина</a>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">О нас</a>
+
+                <a href="{{ url_for('contacts') }}" class="btn btn-primary">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Наши контакты</h2>
+        <p>Вы можете связаться с нами по следующим каналам:</p>
+        <ul>
+            <li>Телефон: 043 45 55 533</li>
+            <li>Email: ddddslle71111@gmail.com</li>
+            <li>Адрес: Украинская, 10</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин спортивных товаров</p>
+    </footer>
+</body>
+</html>

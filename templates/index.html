@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин спортивных товаров</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <h1 class="text-center">Магазин спортивных товаров</h1>
+        <div class="menu">
+            <nav>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Главная</a>
+  <a href="{{ url_for('products_page') }}" class="btn btn-primary">Товары</a>
+    <a href="{{ url_for('cart') }}" class="btn btn-primary">Корзина</a>
+   <a href="{{ url_for('about') }}" class="btn btn-primary">О нас</a>
+
+    <a href="{{ url_for('contacts') }}" class="btn btn-primary">Контакты</a>
+</nav>
+
+
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <h2>Список товаров</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="{{ url_for('static', filename='american_football.jpg') }}" alt="Мяч для американского футбола">
+                <h3>Мяч для американского футбола</h3>
+                <p class="price">Цена: $1200</p>
+                <p class="description">Высококачественный мяч для американского футбола .</p>
+                <div class="quantity">
+                    <label for="quantity-1">Количество:</label>
+                    <input type="number" id="quantity-1" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='basket.jpg') }}" alt="Баскетбольный мяч NBA">
+                <h3>Баскетбольный мяч NBA</h3>
+                <p class="price">Цена: $1500</p>
+                <p class="description">Профессиональный баскетбольный мяч для игры на любых покрытиях.</p>
+                <div class="quantity">
+                    <label for="quantity-2">Количество:</label>
+                    <input type="number" id="quantity-2" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='football.jpg') }}" alt="Футбольный мяч Nike">
+                <h3>Футбольный мяч Nike</h3>
+                <p class="price">Цена: $1000</p>
+                <p class="description">Использованные компоненты гарантируют оптимальную упругость. .</p>
+                <div class="quantity">
+                    <label for="quantity-3">Количество:</label>
+                    <input type="number" id="quantity-3" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='ganteli_1kg.jpg') }}" alt="Гантели 1 кг">
+                <h3>Гантели 1 кг</h3>
+                <p class="price">Цена: $500</p>
+                <p class="description">Набор виниловых гантелей 2 x 1 кг от польского бренда 4FIZJO.</p>
+                <div class="quantity">
+                    <label for="quantity-4">Количество:</label>
+                    <input type="number" id="quantity-4" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='ganteli_2kg.jpg') }}" alt="Гантели 2 кг">
+                <h3>Гантели 2 кг</h3>
+                <p class="price">Цена: $700</p>
+                <p class="description">Набор виниловых гантелей 2 x 2 кг от польского бренда 4FIZJO.</p>
+                <div class="quantity">
+                    <label for="quantity-5">Количество:</label>
+                    <input type="number" id="quantity-5" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='ganteli_3kg.jpg') }}" alt="Гантели 3 кг">
+                <h3>Гантели 3 кг</h3>
+                <p class="price">Цена: $900</p>
+                <p class="description">Набор виниловых гантелей 2 x 3 кг от польского бренда 4FIZJO.</p>
+                <div class="quantity">
+                    <label for="quantity-6">Количество:</label>
+                    <input type="number" id="quantity-6" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='ganteli_4kg.jpg') }}" alt="Гантели 4 кг">
+                <h3>Гантели 4 кг</h3>
+                <p class="price">Цена: $400</p>
+                <p class="description">Набор виниловых гантелей 2 x 4 кг от польского бренда 4FIZJO.</p>
+                <div class="quantity">
+                    <label for="quantity-7">Количество:</label>
+                    <input type="number" id="quantity-7" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+            <div class="product">
+                <img src="{{ url_for('static', filename='tennis.jpg') }}" alt="Набор теннисных мячей">
+                <h3>Набор теннисных мячей</h3>
+                <p class="price">Цена: $200</p>
+                <p class="description">Набор мячей для большого тенниса Newt SWDN Tennis Ball NE-TT-3 .</p>
+                <div class="quantity">
+                    <label for="quantity-8">Количество:</label>
+                    <input type="number" id="quantity-8" name="quantity" min="1" max="10" value="1">
+                </div>
+                <button class="btn btn-success">Добавить в корзину</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин спортивных товаров</p>
+    </footer>
+</body>
+</html>

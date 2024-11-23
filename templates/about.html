@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Магазин спортивных товаров</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="text-center">Магазин спортивных товаров</h1>
+            <div class="menu">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Главная</a>
+                  <a href="{{ url_for('products_page') }}" class="btn btn-primary">Товары</a>
+
+                <a href="{{ url_for('cart') }}" class="btn btn-primary">Корзина</a>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">О нас</a>
+
+                <a href="{{ url_for('contacts') }}" class="btn btn-primary">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>О нашем магазине</h2>
+        <p>Магазин спортивных товаров - это место, где каждый спортсмен найдет для себя качественную продукцию. Мы стремимся предложить лучшее из мира спорта, чтобы вы могли достигать своих целей.</p>
+        <p>Работаем с 2024 года. Наши клиенты всегда остаются довольны.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин спортивных товаров</p>
+    </footer>
+</body>
+</html>
